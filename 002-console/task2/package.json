@@ -1,10 +1,10 @@
 {
-  "name": "task1",
+  "name": "task2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "task1": "./task1.js"
+    "task2": "./task2.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "readline": "^1.3.0",
     "yargs": "^17.5.1"
   }
 }
