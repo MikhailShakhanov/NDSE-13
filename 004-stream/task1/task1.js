@@ -16,8 +16,9 @@ if (argv.GameFileName) {
 
   input.on('line', (data) => {
     writeStream.write(
-      `Игра: ${guessValue.getGameName()};` +
-        `Результат: ${guessValue.tryToGuess(data)}\n`,
+      `Игра:${guessValue.getGameName()}-Результат:${guessValue.tryToGuess(
+        data,
+      )};\n`,
       'UTF8',
     );
     writeStream.end();
