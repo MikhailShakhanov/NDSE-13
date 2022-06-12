@@ -28,7 +28,7 @@ class Library {
     if (currentBook) {
       Object.assign(currentBook, book);
     }
-    return currentBook;
+    return Promise.resolve(currentBook);
   }
  getBook = async (id) => {
     const book = this.books.find((item) => item.id === id);
@@ -36,13 +36,13 @@ class Library {
   }
 
   getAllBooks = async () => {
-    return this.books;
+    return Promise.resolve(this.books);
   }
 
   removeBook = async (id) => {
     const indexRemoveBook = this.books.findIndex((item) => item.id === id);
     if (indexRemoveBook !== -1) this.books.splice(indexRemoveBook, 1);
-    return indexRemoveBook > -1 ? true : false;
+    return Promise.resolve(indexRemoveBook > -1 ? true : false);
   }
 }
 
