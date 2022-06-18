@@ -3,5 +3,13 @@
   "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": [
+    "javascript"
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "j69.ejs-beautify"
+  },
+  "files.associations": {
+    "*.ejs": "html"
+  },
 }

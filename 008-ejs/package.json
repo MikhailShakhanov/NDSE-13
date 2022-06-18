@@ -1,0 +1,12 @@
+{
+  "name": "008-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "dev": "nodemon --ignore upload/* index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

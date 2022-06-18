@@ -59,7 +59,7 @@ module.exports = {
 
     //
     semi: [1, 'always'],
-    'linebreak-style': ["error", "windows"],
+    'linebreak-style': ["error", "unix"],
     "prettier/prettier": ["error", { "endOfLine": "auto" }]
   }
 };
