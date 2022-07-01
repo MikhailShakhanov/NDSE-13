@@ -1,0 +1,26 @@
+version: "3.9"
+services: 
+
+  storage:
+    image: redis:latest
+  
+  counter:
+    build: ./counter
+    ports: 
+      - 4000:4000
+    environment: 
+      - PORT=4000
+      - REDIS_URL=storage
+    depends_on:
+      - storage
+
+  008-ejs-wcounter:
+    build: ./008-ejs-wcounter
+    ports: 
+      - 3000:3000
+    environment: 
+      - COUNTER_URL=counter:4000
+    depends_on:
+      - counter
+
+  
